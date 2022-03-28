@@ -3,6 +3,5 @@
 .RData
 .Ruserdata
 *.aux
-*.html
 *.tex
 *.log
