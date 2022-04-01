@@ -15,39 +15,44 @@ The principles and guidelines presented in this document are inspired from:
     team](https://github.com/tidyverse).
 -   general good practice coding rules (e.g., semantic versioning).
 
+## Terminology
+
+-   we call those in charge of the various hubs *teams*, and those submitting to
+    them *contributors*
+
 ## Introduction: Goals and expectations
 
 ![[Concept map](https://en.wikipedia.org/wiki/Concept_map) of a modelling
 hub.](concept_map.svg){#fig-concept-map}
 
 -   Hub projects are complex, which present an challenge unusual for academics:
-    developing while in production. Any breaking change in the infrastructure is
-    made difficult by the fact that we don't break the workflow of our
-    contributors.
+    developing while in production. Any breaking change in the infrastructure
+    needs to be mindful of not breaking the workflow of our contributors.
 -   Software development is complex. There is no foolproof method to design a
     perfect piece of software at the first attempt. Even the most talented and
     experienced software developers make changes they regret afterwards and are
-    forced to create breaking changes.
+    therefore forced to create breaking changes.
 
 Because of this double complexity, it is not likely that all teams will converge
-towards using the same package at the same time. But this also provides an
+towards using the same setup at the same time. But this also provides an
 opportunity: there is value in exploring independently radically different
 technological solutions to a given problems. One of the team might come across a
-solution that no other could have foreseen.
+solution that no other considered.
 
 However, to keep a collaborative approach, where teams can adopt a solution
 developed by others, and where we can all build on each other's work, there are
 some technical pre-requisites:
 
--   We need to agree on a common basis for all our future work: data format
-    standards and shared design guidelines.
+-   We need to agree on a common basis for all our future work so as to ensure
+    compatilbility across hubs even if the differ on details in scope, purpose
+    and implementation: data format standards and shared design guidelines.
 -   We need to build modular building blocks so transition to a different
     approach is easy and doesn't require changes throughout the ecosystem.
 
 ## Data
 
 As illustrated in @fig-concept-map, forecasts and the format they use is one of
-the most central part of hubs. It therefore needs to be the first point of
+the most central part of hubs. They therefore need to be the first point of
 discussion and agreement between hub teams. Subsequent changes should be done
 via a versioning system to avoid transmitting these breaking changes throughout
 hub tools.
@@ -111,7 +116,7 @@ as much as possible.
 
 The current hub infrastructure gives a good example of the maintenance overhead
 due to overlap and redundancy across packages. As of 2021, the submissions are
-checked for validated in the point during the pipeline: during the submission
+checked or validated at 3 points during the pipeline: during the submission
 process, when loaded with `covidHubUtils::load_forecasts()`, when uploaded to
 zoltar. This means that any change in the data format requires changes in each
 one of the 3 packages. Ultimately, it makes it more difficult to try to modify &
@@ -174,11 +179,11 @@ provided for free by CRAN but since we did not decide yet if all packages should
 be on CRAN, we should also set up our own reverse dependency checking
 infrastructure.
 
-#### Update adversiting {#sec-advertising}
+#### Update advertising {#sec-advertising}
 
 Additionally, to make sure breaking changes are promptly addressed in reverse
-dependencies, all new versions should be loudly announced to all other teams. An
-issue way to do this would be to create a dedicated slack channel with
+dependencies, all new versions should be loudly announced to all other teams. A
+possible way to do this would be to create a dedicated slack channel with
 subscriptions to the relevant repository RSS feeds.
 
 #### Release cadence
