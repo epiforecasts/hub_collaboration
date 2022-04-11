@@ -111,7 +111,7 @@ To ensure each team can easily swap individual pieces of their infrastructure,
 it is important to ensure that the universe is modular. Each package should
 focus on a single task (defined beforehand).
 
-### Avoiding redundancy
+### Avoiding redundancy / reducing coupling
 
 On a similar note, to avoid that changes in one piece of the infrastructure
 ripple throughout the whole universe, overlap between packages should be limited
@@ -124,6 +124,10 @@ process, when loaded with `covidHubUtils::load_forecasts()`, when uploaded to
 zoltar. This means that any change in the data format requires changes in each
 one of the 3 packages. Ultimately, it makes it more difficult to try to modify &
 improve the infrastructure.
+
+![Graphical definition of coupling versus cohesion in software development and
+what should be promoted for good, maintainable software. Source:
+<https://en.wikipedia.org/wiki/Cohesion_(computer_science)>](https://upload.wikimedia.org/wikipedia/commons/0/09/CouplingVsCohesion.svg){#fig-coupling-cohesion}
 
 ### Designing general tools
 
