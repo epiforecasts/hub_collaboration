@@ -150,7 +150,9 @@ Whenever possible, the first input should be the data format defined in [data].
 
 There should be tests ensuring that all functions return the same output when
 fed with `data.frame`, `tibble` or `data.table` since users might prefer to use
-one or the other in the other steps of their workflow.
+one or the other in the other steps of their workflow. This can be facilitated
+by automated [fuzz testing](https://en.wikipedia.org/wiki/Fuzzing) tools such as
+the [autotest](https://docs.ropensci.org/autotest/index.html) package.
 
 ### Outputs
 
