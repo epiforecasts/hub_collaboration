@@ -250,3 +250,5 @@ engagement, a rotating schedule should be established. Each team will be
 responsible for presentation one existing or planned piece of infrastructure.
 This should facilitate exchange of workflow pieces between teams and facilitate
 communication and identification of possible incompatibility.
+
+## Proposed package structure in the universe
