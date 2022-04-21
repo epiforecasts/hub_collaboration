@@ -208,6 +208,9 @@ See discussion at
 
 ## Questions for scope assessment
 
+The following questions might help you to self-assess if the scope of your 
+package is good (narrow enough but easily generalisable) or not:
+
 -   Could this package be accepted by CRAN in theory (even if you don't go
     through the actual submission process)?
 -   Would this package work without any changes in someone started a hub in a
